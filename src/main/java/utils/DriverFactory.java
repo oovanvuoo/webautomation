@@ -21,6 +21,7 @@ public class DriverFactory {
                     }
                 }
                 return new ChromeDriver(chromeOptions);
+
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {

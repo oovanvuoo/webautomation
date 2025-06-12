@@ -21,8 +21,10 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
 
-    - name: Set up Chrome
-      uses: browser-actions/setup-chrome@latest
+    - name: Install Chrome
+      run: |
+        sudo apt update
+        sudo apt install -y google-chrome-stable
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
