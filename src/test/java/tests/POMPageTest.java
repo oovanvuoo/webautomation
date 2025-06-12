@@ -15,7 +15,7 @@ public class POMPageTest extends BaseTest {
   
     @BeforeClass
     public void setUp() throws MalformedURLException {
-        super.setup();
+        // super.setup();
         pomPage = new POMPage(driver, APPLY_ENV_URL);
     }
 

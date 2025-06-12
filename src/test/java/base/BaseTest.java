@@ -1,7 +1,6 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
-import elements.WebItemsMgr;
 import utils.DriverFactory;
 import java.net.MalformedURLException;
 import org.testng.annotations.*;
@@ -14,7 +13,9 @@ public class BaseTest {
 
     @BeforeClass
     public void setup() throws MalformedURLException {
-        this.driver = DriverFactory.createDriver(WebItemsMgr.CHROME_DRIVER);
+        String browser = System.getProperty("browser", "chrome");
+        this.driver = DriverFactory.createDriver(browser);
+        // this.driver = DriverFactory.createDriver(WebItemsMgr.CHROME_DRIVER);
 
         // Read environment from system property, default to "dev"
         String env = System.getProperty("env", "dev").toUpperCase();
