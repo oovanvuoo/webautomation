@@ -1,8 +1,9 @@
 package elements.xpath;
 
+import elements.BaseLocator;
 import elements.WebItemsMgr;
 
-public class WebXPath extends BaseXPath {
+public class WebXPath extends BaseLocator {
     public WebXPath() {
         dictionary.put(WebItemsMgr.HOMEPAGE, "//android.widget.TextView[@content-desc='Trang chủ']");
         dictionary.put(WebItemsMgr.LOGIN_PHONE, "//android.widget.EditText[@text=\"Số điện thoại\"]");

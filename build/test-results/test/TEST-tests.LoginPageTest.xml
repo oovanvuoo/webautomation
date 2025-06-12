@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.LoginPageTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2025-06-11T11:11:13.824Z" hostname="QQ.local" time="9.846">
+<testsuite name="tests.LoginPageTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2025-06-12T03:35:20.688Z" hostname="QQ.local" time="4.894">
   <properties/>
-  <testcase name="TestOpenLoginPage" classname="tests.LoginPageTest" time="5.278"/>
-  <testcase name="TestOpenScrollLoginPage" classname="tests.LoginPageTest" time="4.568">
+  <testcase name="TestOpenLoginPage" classname="tests.LoginPageTest" time="1.865"/>
+  <testcase name="TestOpenScrollLoginPage" classname="tests.LoginPageTest" time="3.026">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
@@ -51,14 +51,16 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Jun 11, 2025 6:11:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-out><![CDATA[Running tests in environment: TEST
+Running tests in environment: TEST
+]]></system-out>
+  <system-err><![CDATA[Jun 12, 2025 10:35:21 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 11, 2025 6:11:16 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jun 12, 2025 10:35:21 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 137.0.7151.69. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Jun 11, 2025 6:11:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 12, 2025 10:35:23 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 11, 2025 6:11:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jun 12, 2025 10:35:23 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 137.0.7151.69. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

@@ -10,6 +10,6 @@ public class Get extends BaseAction {
     }
 
     public String strValue(String elementCode){
-        return elementCode.trim().isBlank() ? "" : wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getPath(elementCode)))).getText();
+        return elementCode.trim().isBlank() ? "" : wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode)))).getText();
     }
 }

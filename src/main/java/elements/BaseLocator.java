@@ -1,9 +1,9 @@
-package elements.xpath;
+package elements;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class BaseXPath {
+public abstract class BaseLocator {
     protected final Map<String, String> dictionary = new HashMap<>();
 
     public String getPath(String elementCode) {

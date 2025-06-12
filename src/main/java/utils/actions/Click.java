@@ -11,12 +11,12 @@ public class Click extends BaseAction {
     }
 
     public void clickItem(String elementCode){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getPath(elementCode)))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode)))).click();
     }
 
     public boolean isClickable(String elementCode) {
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pathRegistry.getPath(elementCode))));
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pathRegistry.getByCSSSelector(elementCode))));
             return true;
         } catch (Exception e) {
             return false;

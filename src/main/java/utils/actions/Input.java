@@ -13,7 +13,7 @@ public class Input extends BaseAction {
     
     public boolean enterString(String elementCode, String value){
         try {
-            WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getPath(elementCode))));
+            WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode))));
             ele.click();
             ele.clear();
             ele.sendKeys(value);

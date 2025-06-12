@@ -14,7 +14,7 @@ public class Do extends BaseAction {
     }
 
     public void clear(String elementCode) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getPath(elementCode)))).clear();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode)))).clear();
     }
     public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) wait.until(d -> d);
@@ -27,13 +27,13 @@ public class Do extends BaseAction {
     }
 
     public void rightClick(String elementCode) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getPath(elementCode))));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode))));
         Actions actions = new Actions(wait.until(d -> d));
         actions.contextClick(element).perform();
     }
 
     public boolean scrollDownToElement(String elementCode) {
-        String xpath = pathRegistry.getPath(elementCode);
+        String xpath = pathRegistry.getByCSSSelector(elementCode);
         JavascriptExecutor js = (JavascriptExecutor) wait.until(d -> d);
         int maxScrolls = 20; // Prevent infinite loop
         int scrollCount = 0;
@@ -62,7 +62,7 @@ public class Do extends BaseAction {
     }
 
     public boolean scrollUpToElement(String elementCode) {
-        String xpath = pathRegistry.getPath(elementCode);
+        String xpath = pathRegistry.getByCSSSelector(elementCode);
         JavascriptExecutor js = (JavascriptExecutor) wait.until(d -> d);
         int maxScrolls = 20; // Prevent infinite loop
         int scrollCount = 0;
