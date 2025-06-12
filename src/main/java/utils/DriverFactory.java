@@ -12,7 +12,7 @@ public class DriverFactory {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
                 if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
-                    chromeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-gpu", "--window-size=1920,1080");
+                    chromeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage", "--window-size=1920,1080");
                 }
                 String extraChromeOptions = System.getProperty("chrome.options");
                 if (extraChromeOptions != null) {
