@@ -9,7 +9,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
     public static WebDriver createDriver(String browser) {
-        switch (browser.toLowerCase()) {
+        String usingBrowser = (browser == null || browser.isBlank()) ? "chrome" : browser.trim().toLowerCase();
+        switch (usingBrowser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
