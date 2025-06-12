@@ -6,10 +6,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverFactory {
     public static WebDriver createDriver(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
                     chromeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage", "--window-size=1920,1080");
@@ -23,6 +26,7 @@ public class DriverFactory {
                 return new ChromeDriver(chromeOptions);
 
             case "firefox":
+                WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
                     firefoxOptions.addArguments("--headless");
