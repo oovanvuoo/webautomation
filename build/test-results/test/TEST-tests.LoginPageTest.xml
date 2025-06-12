@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.LoginPageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-06-12T08:39:48.215Z" hostname="QQ.local" time="12.765">
+<testsuite name="tests.LoginPageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-06-12T09:12:21.905Z" hostname="QQ.local" time="25.883">
   <properties/>
-  <testcase name="TestCreateChallenge" classname="tests.LoginPageTest" time="12.765"/>
+  <testcase name="TestCreateChallenge" classname="tests.LoginPageTest" time="25.883"/>
   <system-out><![CDATA[Running tests in environment: DEV
 Checking if element is displayed: LoginRedirect
 Path: a.nav-link[href="/user/login"]
@@ -16,9 +16,9 @@ Path: a.nav-link[href='/dashboard']
 Checking if element is displayed: MY_CHALLENGE_REDIRECT
 Path: .dropdown-menu.show a.dropdown-item[href^="/challenge/by/"]
 ]]></system-out>
-  <system-err><![CDATA[Jun 12, 2025 3:39:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[Jun 12, 2025 4:12:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 12, 2025 3:39:49 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jun 12, 2025 4:12:23 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 137.0.7151.69. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
