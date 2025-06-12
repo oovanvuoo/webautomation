@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import elements.WebItemsMgr;
 
-public class LoginPage extends BasePage{
-    public LoginPage(WebDriver driver, String applyEnvUrl) {
+public class POMPage extends BasePage{
+    public POMPage(WebDriver driver, String applyEnvUrl) {
         super(driver, applyEnvUrl);
     }
 
@@ -72,7 +72,6 @@ public class LoginPage extends BasePage{
 
     public boolean isChallengeCreated() {
         // Check if the challenge was created successfully on toast notification or page redirection
-        
         return true;
     }
 

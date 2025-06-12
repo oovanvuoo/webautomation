@@ -7,35 +7,35 @@ import org.testng.Assert;
 
 import base.BaseTest;
 import elements.testdata.Account;
-import pages.LoginPage;
+import pages.POMPage;
 
 public class LoginPageTest extends BaseTest {
-    private LoginPage loginPage;
+    private POMPage pomPage;
   
     @Before
     public void setUp() throws MalformedURLException {
         super.setup();
-        loginPage = new LoginPage(driver, APPLY_ENV_URL);
+        pomPage = new POMPage(driver, APPLY_ENV_URL);
     }
 
     @Test
     public void TestCreateChallenge() {
-        loginPage.openHomePage();
-        loginPage.openLoginPage();
-        loginPage.loginWithAccount(Account.Acc1.username, Account.Acc1.password);
-        Assert.assertTrue(loginPage.isInDashboard(), "Login failed or not redirected to dashboard");
-        // loginPage.openChallengeDropdownOptions();
-        // loginPage.openCreateChallengePage();
-        // Assert.assertTrue(loginPage.isInChallengeForm(), "Not in challenge form after opening create challenge page");
-        // loginPage.fillChallengeForm();
-        // Assert.assertTrue(loginPage.isChallengeCreated(), "Challenge was not created successfully");
-        loginPage.openMyChallengesPage();
-        loginPage.openCreatedChallengeByName("V Challenge");
-        Assert.assertEquals(loginPage.getChallengeName(), "V Challenge", "Challenge name does not match");
-        // Assert.assertEquals(loginPage.getChallengeDescription(), "## V Challenge Description", "Challenge description does not match");
-        Assert.assertEquals(loginPage.getChallengeCategory(), "Web");
-        Assert.assertEquals(loginPage.getChallengePoint(), "10", "Challenge difficulty does not match");
-        loginPage.logout();
+        pomPage.openHomePage();
+        pomPage.openLoginPage();
+        pomPage.loginWithAccount(Account.Acc1.username, Account.Acc1.password);
+        Assert.assertTrue(pomPage.isInDashboard(), "Login failed or not redirected to dashboard");
+        // pomPage.openChallengeDropdownOptions();
+        // pomPage.openCreateChallengePage();
+        // Assert.assertTrue(pomPage.isInChallengeForm(), "Not in challenge form after opening create challenge page");
+        // pomPage.fillChallengeForm();
+        // Assert.assertTrue(pomPage.isChallengeCreated(), "Challenge was not created successfully");
+        pomPage.openMyChallengesPage();
+        pomPage.openCreatedChallengeByName("V Challenge");
+        Assert.assertEquals(pomPage.getChallengeName(), "V Challenge", "Challenge name does not match");
+        // Assert.assertEquals(pomPage.getChallengeDescription(), "## V Challenge Description", "Challenge description does not match");
+        Assert.assertEquals(pomPage.getChallengeCategory(), "Web");
+        Assert.assertEquals(pomPage.getChallengePoint(), "10", "Challenge difficulty does not match");
+        pomPage.logout();
     }   
 
 }
