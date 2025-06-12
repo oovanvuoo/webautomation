@@ -37,15 +37,16 @@ README.md
 ### Install Dependencies
 
 ```sh
-./gradlew build
+mvn test -Dbrowser=chrome -Dheadless=true
 ```
+Default is QA Environment
 
 ### Run Tests
 
-You can specify the environment (dev, staging, prod, etc.):
+You can specify the environment (QA, dev, staging, prod, etc.):
 
 ```sh
-./gradlew test -Denv=dev
+mvn test -Dbrowser=chrome -Dheadless=true -Denv=dev
 ```
 
 ---
