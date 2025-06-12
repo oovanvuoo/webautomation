@@ -1,9 +1,10 @@
 package tests;
 
 import java.net.MalformedURLException;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import base.BaseTest;
 import elements.testdata.Account;
@@ -12,7 +13,7 @@ import pages.POMPage;
 public class LoginPageTest extends BaseTest {
     private POMPage pomPage;
   
-    @Before
+    @BeforeClass
     public void setUp() throws MalformedURLException {
         super.setup();
         pomPage = new POMPage(driver, APPLY_ENV_URL);
