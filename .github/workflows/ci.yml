@@ -21,6 +21,9 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
 
+    - name: Set up Chrome
+      uses: browser-actions/setup-chrome@latest
+      
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
@@ -28,7 +31,7 @@ jobs:
       run: ./gradlew build
 
     - name: Run tests
-      run: ./gradlew test -Denv=dev
+      run: ./gradlew test -Denv=dev -Dheadless=true
 
     - name: Archive test reports
       uses: actions/upload-artifact@v4
