@@ -85,6 +85,9 @@ public class POMPage extends BasePage{
 
     public void openCreatedChallengeByName(String string) {
         //Open the first challenge in the list with the specified name
+        //Currently it's hardcoded to open the first challenge item. 
+        //Function will not work if there are no challenges created or if the first challenge is not the one we want.
+        //Need to implement a search by name if required.
         click.clickItem(WebItemsMgr.MY_CHALLENGE_FIRST_ITEM);
     }
 

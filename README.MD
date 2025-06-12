@@ -121,10 +121,22 @@ public void testLogin() {
 
 ---
 
-## 🤝 Contributing
+## 📊 Test Reports
 
-Pull requests are welcome! For major changes, please open an issue first.
+After running your tests with Gradle, a detailed HTML report is generated automatically.
 
----
+- **Location:**  
+  `/build/reports/tests/test/packages/tests.html`
 
-**Happy Testing!**
+Open this file in your browser to view the results of your `LoginPageTest` (and other test classes).
+
+**Example:**
+```sh
+open /build/reports/tests/test/packages/tests.html
+```
+(on Mac, use `open`; on Windows, use `start`)
+
+You can also view the specific report at example:
+```
+build/reports/tests/test/classes/tests.LoginPageTest.html
+```
