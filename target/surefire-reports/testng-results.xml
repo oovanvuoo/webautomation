@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-12T18:09:56 ICT" name="WebAutomationSuite" finished-at="2025-06-12T18:10:08 ICT" duration-ms="11663">
+    <groups>
+    </groups>
+    <test started-at="2025-06-12T18:09:56 ICT" name="AllTests" finished-at="2025-06-12T18:10:08 ICT" duration-ms="11663">
+      <class name="tests.POMPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.POMPageTest@50b472aa]" started-at="2025-06-12T18:09:56 ICT" name="setup" finished-at="2025-06-12T18:09:57 ICT" duration-ms="1050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.POMPageTest@50b472aa]" started-at="2025-06-12T18:09:57 ICT" name="setUp" finished-at="2025-06-12T18:09:57 ICT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TestCreateChallenge()[pri:0, instance:tests.POMPageTest@50b472aa]" started-at="2025-06-12T18:09:57 ICT" name="TestCreateChallenge" finished-at="2025-06-12T18:10:08 ICT" duration-ms="10595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCreateChallenge -->
+      </class> <!-- tests.POMPageTest -->
+    </test> <!-- AllTests -->
+  </suite> <!-- WebAutomationSuite -->
+</testng-results>

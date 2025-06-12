@@ -1,0 +1,17 @@
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/elements/testdata/Account.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/actions/BaseAction.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/actions/Input.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/pages/BasePage.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/pages/DashboardPage.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/actions/Get.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/elements/selector/CSSSelector.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/config/Config.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/DriverFactory.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/elements/xpath/WebXPath.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/elements/BaseLocator.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/pages/POMPage.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/elements/PathRegistry.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/actions/Check.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/actions/Click.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/utils/actions/Do.java
+/Users/vanvu/Documents/Automation/WebAutomation/src/main/java/elements/WebItemsMgr.java

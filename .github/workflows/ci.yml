@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -21,28 +20,14 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
 
-    # - name: Install Chrome
-    #   run: |
-    #     sudo apt update
-    #     sudo apt install -y google-chrome-stable
-
     - name: Set up Chrome
       uses: browser-actions/setup-chrome@latest
 
-    - name: Set up Firefox
-      uses: browser-actions/setup-firefox@latest
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-
-    - name: Build with Gradle
-      run: ./gradlew build
-
-    - name: Run tests
-      run: ./gradlew clean test -Denv=dev -Dbrowser=chrome -Dheadless=true --scan
+    - name: Build and Test with Maven
+      run: mvn test -Dbrowser=chrome -Dheadless=true
 
     - name: Archive test reports
       uses: actions/upload-artifact@v4
       with:
         name: test-report
-        path: build/reports/tests/test
+        path: target/surefire-reports
