@@ -14,7 +14,7 @@ public class Do extends BaseAction {
     }
 
     public void clear(String elementCode) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode)))).clear();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(pathRegistry.getByCSSSelector(elementCode)))).clear();
     }
     public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) wait.until(d -> d);
@@ -27,7 +27,7 @@ public class Do extends BaseAction {
     }
 
     public void rightClick(String elementCode) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathRegistry.getByCSSSelector(elementCode))));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(pathRegistry.getByCSSSelector(elementCode))));
         Actions actions = new Actions(wait.until(d -> d));
         actions.contextClick(element).perform();
     }
@@ -41,7 +41,7 @@ public class Do extends BaseAction {
 
         while (scrollCount < maxScrolls) {
             try {
-                WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+                WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(xpath)));
                 if (element.isDisplayed()) {
                     js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
                     return true;
@@ -69,7 +69,7 @@ public class Do extends BaseAction {
 
         while (scrollCount < maxScrolls) {
             try {
-                WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+                WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(xpath)));
                 if (element.isDisplayed()) {
                     js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
                     return true;

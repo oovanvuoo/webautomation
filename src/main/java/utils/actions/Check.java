@@ -11,7 +11,7 @@ public class Check extends BaseAction {
 
     public boolean isClickable(String elementCode) {
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pathRegistry.getByCSSSelector(elementCode))));
+            wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(pathRegistry.getByCSSSelector(elementCode))));
             return true;
         } catch (Exception e) {
             return false;
@@ -19,8 +19,10 @@ public class Check extends BaseAction {
     }
 
     public boolean isDisplayed(String elementCode) {
+        System.out.println("Checking if element is displayed: " + elementCode);
+        System.out.println("Path: " + pathRegistry.getByCSSSelector(elementCode));
         try {
-            return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pathRegistry.getByCSSSelector(elementCode)))).isDisplayed();
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(pathRegistry.getByCSSSelector(elementCode)))).isDisplayed();
         } catch (Exception e) {
             return false;
         }
@@ -28,7 +30,7 @@ public class Check extends BaseAction {
 
     public boolean isEnabled(String elementCode) {
         try {
-            return wait.until(ExpectedConditions.elementToBeSelected(By.xpath(pathRegistry.getByCSSSelector(elementCode))));
+            return wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(pathRegistry.getByCSSSelector(elementCode)))).isEnabled();
             // return true;
         } catch (Exception e) {
             return false;

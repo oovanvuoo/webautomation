@@ -21,21 +21,21 @@ public class BaseTest {
         System.out.println("Running tests in environment: " + env);
         // Set URL based on env
         switch (env) {
-            case "PROD":
-                this.APPLY_ENV_URL = Config.PROD_URL;
-                break;
+            // case "PROD":
+            //     this.APPLY_ENV_URL = Config.PROD_URL;
+            //     break;
             case "STAGING":
                 this.APPLY_ENV_URL = Config.STAGING_URL;
                 break;
-            case "TEST":
-                this.APPLY_ENV_URL = Config.TEST_URL;
-                break;
-            case "UAT":
-                this.APPLY_ENV_URL = Config.UAT;
-                break;
             case "DEV":
-            default:
                 this.APPLY_ENV_URL = Config.DEV_URL;
+                break;
+            // case "UAT":
+            //     this.APPLY_ENV_URL = Config.UAT;
+            //     break;
+            case "QA":
+            default:
+                this.APPLY_ENV_URL = Config.QA_URL;
                 break;
         }
     }

@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.testng.Assert;
 
 import base.BaseTest;
-import elements.WebItemsMgr;
+import elements.testdata.Account;
 import pages.LoginPage;
 
 public class LoginPageTest extends BaseTest {
@@ -19,38 +19,23 @@ public class LoginPageTest extends BaseTest {
     }
 
     @Test
-    public void TestOpenScrollLoginPage() {
+    public void TestCreateChallenge() {
+        loginPage.openHomePage();
         loginPage.openLoginPage();
-        // loginPage.scrollDown();
-        Assert.assertTrue(loginPage.scrollDownToElement(WebItemsMgr.LOGIN_BUTTON_REGISTER));
-  
-    }
+        loginPage.loginWithAccount(Account.Acc1.username, Account.Acc1.password);
+        Assert.assertTrue(loginPage.isInDashboard(), "Login failed or not redirected to dashboard");
+        // loginPage.openChallengeDropdownOptions();
+        // loginPage.openCreateChallengePage();
+        // Assert.assertTrue(loginPage.isInChallengeForm(), "Not in challenge form after opening create challenge page");
+        // loginPage.fillChallengeForm();
+        // Assert.assertTrue(loginPage.isChallengeCreated(), "Challenge was not created successfully");
+        loginPage.openMyChallengesPage();
+        loginPage.openCreatedChallengeByName("V Challenge");
+        Assert.assertEquals(loginPage.getChallengeName(), "V Challenge", "Challenge name does not match");
+        // Assert.assertEquals(loginPage.getChallengeDescription(), "## V Challenge Description", "Challenge description does not match");
+        Assert.assertEquals(loginPage.getChallengeCategory(), "Web");
+        Assert.assertEquals(loginPage.getChallengePoint(), "10", "Challenge difficulty does not match");
+        loginPage.logout();
+    }   
 
-    @Test
-    public void TestOpenLoginPage() {
-        loginPage.openLoginPage();
-    }
-
-
-    // @Test
-    // public void testLoginWithValidCredentials() {
-    //     loginPage.open();
-    //     loginPage.login("validUser", "validPassword");
-    //     assertTrue(loginPage.isLoginSuccessful());
-    // }
-
-    // @Test
-    // public void testLoginWithInvalidCredentials() {
-    //     loginPage.open();
-    //     loginPage.login("invalidUser", "invalidPassword");
-    //     assertFalse(loginPage.isLoginSuccessful());
-    // }
-
-    // @Test
-    // public void testLoginWithEmptyFields() {
-    //     loginPage.open();
-    //     loginPage.login("", "");
-    //     assertTrue(loginPage.isErrorDisplayed("Username and password cannot be empty"));
-    // }
-    
 }
