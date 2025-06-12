@@ -10,7 +10,7 @@ import base.BaseTest;
 import elements.testdata.Account;
 import pages.POMPage;
 
-public class LoginPageTest extends BaseTest {
+public class POMPageTest extends BaseTest {
     private POMPage pomPage;
   
     @BeforeClass
